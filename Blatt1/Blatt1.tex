@@ -1,5 +1,10 @@
 \documentclass[10pt,a4paper]{article}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
 \begin{document}
 \begin{center}
 \textbf{Stochastik 1 \\ Serie 1 \\}
@@ -12,24 +17,30 @@ Konstantin Kobs
 
 \section*{Aufgabe 1}
 \begin{itemize}
-\item[a)] $A^{c} \cup B^{c} \cup C^{c}$
-
-\item[b)] 
-$(A \cup B \cup C^{c}) \cup (A \cup B^{c} \cup C) \cup (A^{c} \cup B \cup C) $
+\item[(a)] $(A \cup B \cup C)^{c}$
+% Es ist das Komplement der Gesamtmenge und nicht die Gesamtmenge der Komplemente. ;)
+\item[(b)] 
+$(A \cap B \cap C^{c}) \cup (A \cap B^{c} \cap C) \cup (A^{c} \cap B \cap C)$
+% Die Mengen in den Klammern mÃ¼ssen geschnitten werden
 \end{itemize}
 
 \section*{Aufgabe 2}
+\begin{itemize}
+\item[(a)]
+Zu zeigen: $\frac{1}{12} \leq P(A \cap B) \leq \frac{1}{3}$
+
+\item[(b)]
+\end{itemize}
 
 \section*{Aufgabe 3}
-
 \begin{itemize}
-\item[a)] Wenn wir davon ausgehen k�nnen das jede Person die gleiche Wahrscheinlichkeit hat einen Platz zu bekommen, also eine Gleichverteilung vorliegt ist es sinnvoll Laplacem� zu nehmen.\\
-Als Modell: $ \Omega = \{(\omega_{1},\omega{2}) | \omega_{1},\omega{2} \in\{1,...,12\} \} $, wobei 1 = Herr Meyer ist und 2 = Frau M�ller die Restlichen $\geq$ 3 entsprechen die anderen Personen. 
+\item[(a)] Wenn wir davon ausgehen können das jede Person die gleiche Wahrscheinlichkeit hat einen Platz zu bekommen, also eine Gleichverteilung vorliegt ist es sinnvoll LaplacemaÃ zu nehmen.\\
+Als Modell: $ \Omega = \{(\omega_{1},\omega{2}) | \omega_{1},\omega{2} \in\{1,...,12\} \} $, wobei 1 = Herr Meyer ist und 2 = Frau Müller die Restlichen $\geq$ 3 entsprechen die anderen Personen. 
 
-\item[b)]
+\item[(b)]
 A = \{(1,2)\}
 
-\item[c)]
+\item[(c)]
 $P(A) = \frac{\mid A \mid}{\mid \Omega \mid} = \frac{1}{78}$ %ist das richtig? 
 \end{itemize}
 \end{document}
