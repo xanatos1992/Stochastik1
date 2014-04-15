@@ -1,0 +1,36 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{center}
+\textbf{Stochastik 1 \\ Serie 2 \\}
+\end{center}
+
+\begin{flushright}
+Kevin Stehn 6416016 Gruppe 3 \\
+Konstantin Kobs 6414943 Gruppe 2
+\end{flushright}
+
+\section*{Aufgabe 1}
+
+\section*{Aufgabe 2}
+$\Omega = \{(\omega_{1},\omega_{2},\omega_{3},\omega_{4},\omega_{5},\omega_{6},\omega_{7}) | \omega_{i} \in \{1,...,7\} \forall i \in \{1,...,7\}: \omega_{i} \neq \omega_{j}\}$ \\
+
+\begin{itemize}
+\item[(a)] $A = \{(\omega_{1},\omega_{2},\omega_{3},\omega_{4},\omega_{5},\omega_{6},\omega_{7}) \in \Omega | \omega_{7} \in \{2,4,6\}  \}$
+\item[(b)] $B = \{(\omega_{1},\omega_{2},\omega_{3},\omega_{4},\omega_{5},\omega_{6},\omega_{7}) \in \Omega |\sum \omega_{i} \forall i \in\{1,...,7\} ist durch 3 Teilbar \}$ Dieses Ereignis hat die Wahrscheinlichkeit null, da es nur eine Quersumme gibt und diese ist nicht durch 3 Teilbar da diese 28 ist.
+\end{itemize}
+
+\section*{Aufgabe 3}
+$\Omega = \{(\omega_{1},...,\omega_{12}) | \omega_{i} \in \{1,...,36\} \vee \omega_{i} \neq \omega_{j} \}$ \\
+$A = \{(\omega_{1},...,\omega_{6}) \in \Omega|\omega_{i} \in \{1,...,20\} \vee \omega_{i} \neq \omega_{j} \}$ \\
+
+$|\Omega| = \binom{36}{12} $ \\
+$|A| = \binom{20}{6}$ \\
+
+$P(A) = \frac{|A|}{|\Omega|} = \frac{\binom{20}{6}}{\binom{36}{12}} = 3,097e^{-5}$
+\end{document}
