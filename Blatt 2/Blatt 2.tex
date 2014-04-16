@@ -5,6 +5,8 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 
+\newcommand{\entspricht}{\mathop{\widehat{=}}}
+
 \begin{document}
 \begin{center}
 \textbf{Stochastik 1 \\ Serie 2 \\}
@@ -16,6 +18,21 @@ Konstantin Kobs 6414943 Gruppe 2
 \end{flushright}
 
 \section*{Aufgabe 1}
+$\Omega = \{(\omega_{1},\omega_{2},\omega_{3}) | \omega_{i} \in \{\{1,...,12\} \vee \omega_{1}<\omega_{2}<\omega_{3} \}$ \\
+F\"ur $\omega_{i} = 1,2,3,4,5 \entspricht$ rot \\
+ 	  $\omega_{i} = 6,7,8 \entspricht$ gelb\\
+  	  $\omega_{i} = 9,10,11,12 \entspricht$ gr\"un \\
+Das Ereignis das alle drei die gleiche Farben haben ist:\\
+$A = \{(\omega_{1},\omega_{2},\omega_{3}) \in \Omega |\omega_{1}=\omega_{2}=\omega_{3}=rot\vee gelb \vee $gr\"un$\}$
+Daraus lassen sich drei Teilereignisse Bilden\\
+$A_{rot} =\{(\omega_{1},\omega_{2},\omega_{3}) \in \Omega |\omega_{1}=\omega_{2}=\omega_{3}=rot\}$ \\
+$A_{gelb} =\{(\omega_{1},\omega_{2},\omega_{3}) \in \Omega |\omega_{1}=\omega_{2}=\omega_{3}=gelb\}$\\
+$A_{gruen} =\{(\omega_{1},\omega_{2},\omega_{3}) \in \Omega |\omega_{1}=\omega_{2}=\omega_{3}=gruen\}$ \\
+Da wir ohne Beachtung auf die Reihenfolge und ohne zur\"ucklegen ist die M\"achtigkeit der Mengen wie folgt:\\
+$|\Omega| = \binom{12}{3} = 220$ \\
+$|A| = |A_{rot}| + |A_{gelb}| + |A_{gruen}| = \binom{5}{3} + \binom{3}{3} +\binom{4}{3} = 15$ \\
+Damit ist die Wahrscheinlichkeit drei mal die selbe Farbe zuf\"allig zu ziehen: \\
+$P(A) = \frac{|A|}{|\Omega|} = \frac{15}{220} = \frac{3}{44} = 0,06\overline{81}$
 
 \section*{Aufgabe 2}
 $\Omega = \{(\omega_{1},\omega_{2},\omega_{3},\omega_{4},\omega_{5},\omega_{6},\omega_{7}) | \omega_{i} \in \{1,...,7\} \forall i \in \{1,...,7\}: \omega_{i} \neq \omega_{j}\}$ \\
@@ -32,5 +49,5 @@ $A = \{(\omega_{1},...,\omega_{6}) \in \Omega|\omega_{i} \in \{1,...,20\} \vee \
 $|\Omega| = \binom{36}{12} $ \\
 $|A| = \binom{20}{6}$ \\
 
-$P(A) = \frac{|A|}{|\Omega|} = \frac{\binom{20}{6}}{\binom{36}{12}} = 3,097e^{-5}$
+$P(A) = \frac{|A|}{|\Omega|} = \frac{\binom{20}{6}}{\binom{36}{12}}= \frac{38}{1227135} = 3,097*10^{-5}$
 \end{document}
