@@ -18,36 +18,39 @@ Konstantin Kobs 6414943 Gruppe 2
 \end{flushright}
 
 \section*{Aufgabe 1}
-$\Omega = \{(\omega_{1},\omega_{2},\omega_{3}) | \omega_{i} \in \{\{1,...,12\} \vee \omega_{1}<\omega_{2}<\omega_{3} \}$ \\
-F\"ur $\omega_{i} = 1,2,3,4,5 \entspricht$ rot \\
- 	  $\omega_{i} = 6,7,8 \entspricht$ gelb\\
-  	  $\omega_{i} = 9,10,11,12 \entspricht$ gr\"un \\
-Das Ereignis das alle drei die gleiche Farben haben ist:\\
-$A = \{(\omega_{1},\omega_{2},\omega_{3}) \in \Omega |\omega_{1}=\omega_{2}=\omega_{3}=rot\vee gelb \vee $gr\"un$\}$
-Daraus lassen sich drei Teilereignisse Bilden\\
-$A_{rot} =\{(\omega_{1},\omega_{2},\omega_{3}) \in \Omega |\omega_{1}=\omega_{2}=\omega_{3}=rot\}$ \\
-$A_{gelb} =\{(\omega_{1},\omega_{2},\omega_{3}) \in \Omega |\omega_{1}=\omega_{2}=\omega_{3}=gelb\}$\\
-$A_{gruen} =\{(\omega_{1},\omega_{2},\omega_{3}) \in \Omega |\omega_{1}=\omega_{2}=\omega_{3}=gruen\}$ \\
-Da wir ohne Beachtung auf die Reihenfolge und ohne zur\"ucklegen ist die M\"achtigkeit der Mengen wie folgt:\\
-$|\Omega| = \binom{12}{3} = 220$ \\
-$|A| = |A_{rot}| + |A_{gelb}| + |A_{gruen}| = \binom{5}{3} + \binom{3}{3} +\binom{4}{3} = 15$ \\
-Damit ist die Wahrscheinlichkeit drei mal die selbe Farbe zuf\"allig zu ziehen: \\
-$P(A) = \frac{|A|}{|\Omega|} = \frac{15}{220} = \frac{3}{44} = 0,06\overline{81}$
+$\Omega = \{(\omega_{1},\omega_{2},\omega_{3}) \in \{ \text{rot, gelb, grün}\}^3 | \text{rot links von gelb; gelb links von grün}\}$ \\
+Das Ereignis, dass alle drei die gleiche Farben haben, ist:\\
+$A = \{\text{(rot, rot, rot), (gelb, gelb, gelb), (grün, grün, grün)}\}$
+
+Wir berechnen die Mächtigkeiten der Mengen mit Hilfe des Binomialkoeffizienten, da wir nicht ``zurücklegen'' und die Reihenfolge nicht beachten:
+\begin{align*}
+	|\Omega| &= \binom{12}{3} = 220\\
+	|A| &= \binom{5}{3} + \binom{3}{3} +\binom{4}{3} = 15
+\end{align*}
+Damit ist die Wahrscheinlichkeit, drei mal die selbe Farbe zuf\"allig zu ziehen: \\
+$$P(A) = \frac{|A|}{|\Omega|} = \frac{15}{220} = \frac{3}{44} = 0,06\overline{81}$$
 
 \section*{Aufgabe 2}
-$\Omega = \{(\omega_{1},\omega_{2},\omega_{3},\omega_{4},\omega_{5},\omega_{6},\omega_{7}) | \omega_{i} \in \{1,...,7\} \forall i \in \{1,...,7\}: \omega_{i} \neq \omega_{j}\}$ \\
+$\Omega = \{(\omega_{1},\omega_{2},\omega_{3},\omega_{4},\omega_{5},\omega_{6},\omega_{7}) | \omega_{i} \in \{1,...,7\} \forall i \neq j : \omega_{i} \neq \omega_{j}\}$ \\
+$|\Omega| = 7!$, da wir jede Stelle ``ohne Zurücklegen'' befüllen können.
 
 \begin{itemize}
-\item[(a)] $A = \{(\omega_{1},\omega_{2},\omega_{3},\omega_{4},\omega_{5},\omega_{6},\omega_{7}) \in \Omega | \omega_{7} \in \{2,4,6\}  \}$
-\item[(b)] $B = \{(\omega_{1},\omega_{2},\omega_{3},\omega_{4},\omega_{5},\omega_{6},\omega_{7}) \in \Omega |\sum \omega_{i} \forall i \in\{1,...,7\} ist durch 3 Teilbar \}$ Dieses Ereignis hat die Wahrscheinlichkeit null, da es nur eine Quersumme gibt und diese ist nicht durch 3 Teilbar da diese 28 ist.
+\item[(a)] $A = \{(\omega_{1},\omega_{2},\omega_{3},\omega_{4},\omega_{5},\omega_{6},\omega_{7}) \in \Omega | \omega_{7} \in \{2,4,6\}  \}$\\
+Die Mächtigkeit dieser Menge beträgt $3 \cdot 6!$, da wir eine Stelle mit einer der drei Zahlen reservieren und die restlichen Stellen beliebig füllen können (aber ``ohne Zurücklegen''). Die Wahrscheinlichkeit beträgt also $\frac{3 \cdot 6!}{7!} = \frac{3}{7} \approx 0,429$
+\item[(b)] $B = \{(\omega_{1},\omega_{2},\omega_{3},\omega_{4},\omega_{5},\omega_{6},\omega_{7}) \in \Omega |\sum \omega_{i} \forall i \in\{1,...,7\} \text{ ist durch 3 teilbar} \}$\\
+Dieses Ereignis hat die Wahrscheinlichkeit null, da jede Zahl aus $\Omega$ die gleiche Quersumme besitzt. Diese ist 28 und somit nicht durch 3 teilbar. Damit ist auch jede Zahl aus $\Omega$ nicht durch drei teilbar.
 \end{itemize}
 
 \section*{Aufgabe 3}
-$\Omega = \{(\omega_{1},...,\omega_{12}) | \omega_{i} \in \{1,...,36\} \vee \omega_{i} \neq \omega_{j} \}$ \\
-$A = \{(\omega_{1},...,\omega_{6}) \in \Omega|\omega_{i} \in \{1,...,20\} \vee \omega_{i} \neq \omega_{j} \}$ \\
+Wir haben $\binom{36}{12}$ verschiedene Klausuren zu betrachten, da wir aus dem Aufgabenpool 12 Aufgaben ohne Zurücklegen und ohne Beachtung der Reihenfolge ziehen. Dabei seien die Aufgaben von 1 bis 36 durchnummeriert.\\
+$\Omega = \{(\omega_{1},...,\omega_{12}) | \omega_{i} \in \{1,...,36\} \wedge \omega_{i} < \omega_{j} \}$ \\
+Angenommen, der Student kann die ersten 20 Aufgaben lösen. Dann gilt für das Ereignis A ``Der Student besteht die Prüfung'':\\
+$A = \{(\omega_{1},...,\omega_{12}) \in \Omega | \text{Anzahl der }\omega_{i} \in \{1,...,20\} \geq 6 \}$ \\
+Nun müssen wir die Einzelwahrscheinlichkeiten summieren, dass der Student \textit{genau} 6, 7, 8, 9, 10, 11 oder 12 Aufgaben richtig beantwortet. Das ist ähnlich der Überlegung, beim Lotto ``genau drei Richtige zu bekommen''. Es gilt also:\\
+\begin{align*}
+	P(A) &= \sum_{i=6}^{12} \frac{\binom{20}{i} \cdot \binom{16}{12 - i}}{\binom{36}{12}}\\
+	&= \frac{247}{310}\\
+	&\approx 0,797
+\end{align*}
 
-$|\Omega| = \binom{36}{12} $ \\
-$|A| = \binom{20}{6}$ \\
-
-$P(A) = \frac{|A|}{|\Omega|} = \frac{\binom{20}{6}}{\binom{36}{12}}= \frac{38}{1227135} = 3,097*10^{-5}$
 \end{document}
