@@ -18,10 +18,9 @@ Konstantin Kobs 6414943 Gruppe 2
 \end{flushright}
 
 \section*{Aufgabe 1}
-$\Omega = \{(\omega_{1},\omega_{2},\omega_{3}) \in \{ \text{rot, gelb, grün}\}^3 | \text{rot links von gelb; gelb links von grün}\}$ \\
+$\Omega = \{(\omega_{1},\omega_{2},\omega_{3}) | \omega_i \in \{ \text{1, 2, \dots, 12}\} \wedge \omega_1 < \omega_2 < \omega_3 \}$\\ mit $\text{rot} \entspricht \{1, 2, 3, 4, 5\}, \text{gelb} \entspricht \{6, 7, 8\}, \text{grün} \entspricht \{9, 10, 11, 12\}$.\\
 Das Ereignis, dass alle drei die gleiche Farben haben, ist:\\
-$A = \{\text{(rot, rot, rot), (gelb, gelb, gelb), (grün, grün, grün)}\}$
-
+$A = \{(\omega_1, \omega_2, \omega_3) \in \Omega | \text{für alle } i \in \{1,2,3\} \text{ gilt: } \omega_i \text{ entweder} \in \text{rot, gelb oder grün} \}$ unter der Voraussetzung, dass die oben beschriebenen Zahlenmengen mit der Farbe bezeichnet werden.\\
 Wir berechnen die Mächtigkeiten der Mengen mit Hilfe des Binomialkoeffizienten, da wir nicht ``zurücklegen'' und die Reihenfolge nicht beachten:
 \begin{align*}
 	|\Omega| &= \binom{12}{3} = 220\\
