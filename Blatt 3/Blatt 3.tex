@@ -18,20 +18,35 @@ Konstantin Kobs 6414943 Gruppe 2
 \end{flushright}
 
 \section*{Aufgabe 1}
+Da alle Elementarwahrscheinlichkeiten zusammen 1 sein müssen folgt also draus:\\
+\[ \sum_{w=0}^\infty c * q^w = 1 \Leftrightarrow  c * \sum_{w=0}^\infty q^w = 1 \]
+\[\underleftrightarrow{geom. Reihe} \text{  } \frac{c}{1-q} = 1 \]
+Durch umstellen der Gleichung erhalten wir: $c = 1-q$.
 
 \section*{Aufgabe 2}
-Das Ereignis $B \ent \text{ist ein Terrorist}$ \\ 
-und das Ereignis $A \ent \text{wurde festgenommen}$.
-Die Wahrscheinlichkeit das ein Terrorist festgenommen wird $P(A|B) = 98\% $ und das jemand festgenommen wird der kein Terrorist ist $P(A|B^{c})= 2\% $.\\\\
-Die Wahrscheinlichkeit $P(B|A) \ent \text{das ein festegnommener Passagier ein Terrorist ist}$.
-Wir nehmen an das: $P(B) = \frac{1}{2000}$ und $P(B^c)= \frac{1999}{2000}$ \\
+Das Ereignis $T \ent \text{ist ein Terrorist}$ \\ 
+und das Ereignis $F \ent \text{wurde festgenommen}$.
+Die Wahrscheinlichkeit das ein Terrorist festgenommen wird $P(F|T) = 0,98 $,das jemand nicht festgenommen wird und kein Terrorist ist $P(F^c|T^c) = 0,99$ daraus folgt das jemand festgenommen wird der kein Terrorist ist $P(F|T^{c})= 0,01 $.\\
+Die Wahrscheinlichkeit $P(T|F) \ent \text{das ein festegnommener Passagier ein Terrorist ist}$.
+Wir nehmen an das: $P(T) = 0,0001\%$ und $P(T^c)= 0,9999\% $ \\
 Daraus folgt:\\
-$P(B|A) = \frac{P(A|B)*P(B)}{P(A|B)*P(B) + P(A|B^c) * P(B^c)} = 
-\frac{98*\frac{1}{2000}}{98*\frac{1}{2000}+ 2*\frac{1999}{2000}} = \frac{49}{2048} \approx 4\%$
+$P(T|F) = \frac{P(F|T)*P(T)}{P(F|T)*P(T) + P(F|T^c) * P(T^c)} = 
+\frac{0,98*0,0001}{0,98*0,0001+ 0,01*0,9999} \newline = \frac{98}{10097} \approx 9,7*10^{-3}$
 
 \section*{Aufgabe 3}
-$\Omega = \{(\omega_{1},\omega_{2}) | \omega_{i} \in \{1,2\} \wedge i=1,2\}$ \\
-Dabei ist: $\omega_{1} \ent \text{1 .Wurf}$ und $\omega_{2} \ent \text{2. Wurf} $\\
-$\omega_{i}=1 \ent \text{Zahl} \text{ und } \omega_{i}=2 \ent \text{Kopf}$
+Unser Modell ist: 
+$\Omega = \{(\omega_{1},\omega_{2}) \in \{K,Z\}^2 \}$ \\
+Dabei ist: $\omega_{1} \ent \text{1 .Wurf}$ und $\omega_{2} \ent \text{2. Wurf} $ und \\
+$\omega_{i}=K \ent \text{Kopf} \text{ und } \omega_{i}=Z \ent \text{Zahl}$. Dadurch bekommen wir die folgenden\\ Ereignisse:\\
+$A = \{(Z,K),(Z,Z)\} \text{ } P(A) = \frac{1}{2}$\\
+$B = \{(K,Z),(Z,Z)\} \text{ } P(B) =\text{ } \frac{1}{2}$\\
+$C = \{(K,K),(Z,Z)\} \text{ } P(C) =\text{ } \text{ } \frac{1}{2}$\\
+Draus folgen die Wahrscheinlichkeiten:\\
+$P(A \cap B) = \text{ }\frac{1}{4} = P(A)*P(B) \Rightarrow \text{unabhänging} \newline
+P(A \cap C) = \frac{1}{4} = P(A)*P(C)  \Rightarrow \text{unabhänging} \newline
+P(B \cap C) = \text{ }\frac{1}{4} = P(B)*P(C)  \Rightarrow \text{unabhänging}$\\
+Für (A,B,C) müssen wir zunächst die schon oben berechneten Gleichungen überprüfen. Zusätzlich muss aber auch noch gelten: \\
+$P(A \cap B \cap C) = P(A)*P(B)*P(C)$ \\
+$P(A \cap B \cap C) = \frac{1}{4} \neq \frac{1}{8}  = P(A)*P(B)*P(C) \Rightarrow$  nicht unabhängig
 
 \end{document}
