@@ -1,0 +1,45 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\ent}{\mathop{\widehat{=}}}
+
+\begin{document}
+\begin{center}
+\textbf{Stochastik 1 \\ Serie 5 \\}
+\end{center}
+
+\begin{flushright}
+Kevin Stehn 6416016 Gruppe 3 \\
+Konstantin Kobs 6414943 Gruppe 2
+\end{flushright}
+
+\section*{Aufgabe 1}
+\begin{itemize}
+\item[(a)]Es muss gelten: $1 = \sum\nolimits_{n=1}^\infty p_n$. Daraus folgt:\\
+\[ 1 = \sum_{n=1}^\infty p_n = \sum_{n=1}^\infty \frac{c}{n^2} \]
+\item[(b)]
+\end{itemize}
+
+\section*{Aufgabe 2}
+Das Model für unser Sonderausschuss ist:\\
+$\Omega = \{ (\omega_1,...,\omega_5) | \omega_i \in \{A\}^5 \cup \{B\}^7 \text{ f\"ur } i= 1,...,5 \}$ und P = Laplacemaß da jedes Mitglied ein gleich hohe Wahrscheinlichkeit hat gezogen zu werden. Dabei gilt $\omega_i = A \ent \text{Vertreter i ist aus Gruppe A und } \omega_i = B \ent \text{Der Vertreter i ist aus Gruppe B}$.
+Das Ereignis, dass 2 Vertreter aus Gruppe A im Ausschuss ist:\\
+$A = \{\omega \in \Omega | \sum(\omega_i = A) = 2 \text{ f\"ur } i = 1,...,5\} =\newline \{(A,A,B,B,B),(A,B,A,B,B),(A,B,B,A,B),(A,B,B,B,A),\newline(B,A,B,B,A),(B,B,A,B,A),(B,B,B,A,A) \} \newline
+|\Omega| = 95040 \text{ und  } |A| = 7$. \\
+Daraus folgt die Wahrscheinlichkeit für das Ereignis A:\\
+$P(A) = \frac{|A|}{|B|} = \frac{7}{95040} = 7.36 \cdot 10^{-5}$
+\section*{Aufgabe 3}
+\begin{itemize}
+\item[(a)]Unser Modell: $\Omega = \{0,1\}^{100}$ dabei gilt $0 \ent \text{ nicht Geburtstag und } 1 \ent \text{ Geburtstag}$ Betrachten wir nun für alle i = 1,...,100:\\
+$X_i: \Omega \rightarrow \{0,1\}$ dabei folgt $X_i \sim Ber(\frac{1}{365})$.
+Daraus lässt sich die Zufallsgröße X wie folgt bilden: 
+\[X = \sum_{i=1}^{100} X_i \]
+\item[(b)]Da wir eine \grqq großes\grqq \text{ }n haben und ein \grqq kleines\grqq \text { } p, lässt es sich Poissonverteilt ansehen. Dabei ist der Parameter 
+$\lambda = 100*\frac{1}{365} = \frac{20}{73} $
+\item[(c)] $P(X=0) \approx \frac{\lambda^k}{k!}*e^{-\lambda} = \frac{\frac{20}{73}^0}{0!} *e^{-\frac{20}{73}} \approx 0,76$
+\end{itemize}
+\end{document}
