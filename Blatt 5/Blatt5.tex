@@ -34,13 +34,9 @@ P(X \geq 3) &= 1 - P(X = 2) - P(X = 1)\\
 \end{itemize}
 
 \section*{Aufgabe 2}
-Das Model für unser Sonderausschuss ist:\\
-$\Omega = \{ (\omega_1,...,\omega_5) | \omega_i \in \{A\}^5 \cup \{B\}^7 \text{ f\"ur } i= 1,...,5 \}$ und P = Laplacemaß da jedes Mitglied ein gleich hohe Wahrscheinlichkeit hat gezogen zu werden. Dabei gilt $\omega_i = A \ent \text{Vertreter i ist aus Gruppe A und } \omega_i = B \ent \text{Der Vertreter i ist aus Gruppe B}$.
-Das Ereignis, dass 2 Vertreter aus Gruppe A im Ausschuss ist:\\
-$A = \{\omega \in \Omega | \sum(\omega_i = A) = 2 \text{ f\"ur } i = 1,...,5\} =\newline \{(A,A,B,B,B),(A,B,A,B,B),(A,B,B,A,B),(A,B,B,B,A),\newline(B,A,B,B,A),(B,B,A,B,A),(B,B,B,A,A) \} \newline
-|\Omega| = 95040 \text{ und  } |A| = 7$. \\
-Daraus folgt die Wahrscheinlichkeit für das Ereignis A:\\
-$P(A) = \frac{|A|}{|B|} = \frac{7}{95040} = 7.36 \cdot 10^{-5}$
+Wir modellieren unsere Zufallsgröße $X$ als die Anzahl der Mitglieder im Sonderausschuss, die aus der Gruppe A kommen: $X : \Omega \rightarrow \{0,1,2,3,4,5\}$. $P^X$ ist somit hypergeometrisch verteilt. Eine Analogie hierzu ist das Lottospielen, bei dem 5 Kugeln gezogen werden und wir die Wahrscheinlichkeit für genau 2 Richtige ausrechnen wollen. Somit gilt:
+$$P(X = 2) = \frac{\binom{5}{2} \binom{7}{3}}{\binom{12}{5}} = \frac{175}{396} = 0,44\overline{19}$$
+
 \section*{Aufgabe 3}
 \begin{itemize}
 \item[(a)]Unser Modell: $\Omega = \{0,1\}^{100}$ dabei gilt $0 \ent \text{ nicht Geburtstag und } 1 \ent \text{ Geburtstag}$ Betrachten wir nun für alle i = 1,...,100:\\
