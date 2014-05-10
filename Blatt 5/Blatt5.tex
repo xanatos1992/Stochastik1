@@ -19,9 +19,18 @@ Konstantin Kobs 6414943 Gruppe 2
 
 \section*{Aufgabe 1}
 \begin{itemize}
-\item[(a)]Es muss gelten: $1 = \sum\nolimits_{n=1}^\infty p_n$. Daraus folgt:\\
-\[ 1 = \sum_{n=1}^\infty p_n = \sum_{n=1}^\infty \frac{c}{n^2} \]
+\item[(a)]Nachweis der Dichteeigenschaft:\\
+1.
+$$1 = \sum_{n=1}^\infty p_n = \sum_{n=1}^\infty \frac{c}{n^2} = c \cdot \sum_{n=1}^\infty \frac{1}{n^2} = c \cdot \frac{\pi^2}{6}$$
+$$\Leftrightarrow c = \frac{6}{\pi^2}$$
+2.\\
+Da $c$ positiv ist, sind auch alle Werte der Folge $p_n$ für $n > 0$ positiv. Somit gilt auch diese Eigenschaft.
 \item[(b)]
+\begin{align*}
+P(X \geq 3) &= 1 - P(X = 2) - P(X = 1)\\
+&= 1 - \frac{6}{4\pi^2} - \frac{6}{\pi^2}\\
+&\approx 0,24
+\end{align*}
 \end{itemize}
 
 \section*{Aufgabe 2}
