@@ -21,15 +21,13 @@ Konstantin Kobs 6414943 Gruppe 2
 \begin{itemize}
 \item[(a)]Nachweis der Dichteeigenschaft:\\
 1.
-$$1 = \sum_{n=1}^\infty p_n = \sum_{n=1}^\infty \frac{c}{n^2} = c \cdot \sum_{n=1}^\infty \frac{1}{n^2} = c \cdot \frac{\pi^2}{6}$$
-$$\Leftrightarrow c = \frac{6}{\pi^2}$$
+$$1 = \sum_{n=1}^\infty p_n = \sum_{n=1}^\infty \frac{c}{n^2} = c \cdot \sum_{n=1}^\infty \frac{1}{n^2} = c \cdot \frac{\pi^2}{6} \Leftrightarrow c = \frac{6}{\pi^2}$$
 2.\\
 Da $c$ positiv ist, sind auch alle Werte der Folge $p_n$ für $n > 0$ positiv. Somit gilt auch diese Eigenschaft.
 \item[(b)]
 \begin{align*}
 P(X \geq 3) &= 1 - P(X = 2) - P(X = 1)\\
-&= 1 - \frac{6}{4\pi^2} - \frac{6}{\pi^2}\\
-&\approx 0,24
+&= 1 - \frac{6}{4\pi^2} - \frac{6}{\pi^2} \approx 0,24
 \end{align*}
 \end{itemize}
 
@@ -39,12 +37,13 @@ $$P(X = 2) = \frac{\binom{5}{2} \binom{7}{3}}{\binom{12}{5}} = \frac{175}{396} =
 
 \section*{Aufgabe 3}
 \begin{itemize}
-\item[(a)]Unser Modell: $\Omega = \{0,1\}^{100}$ dabei gilt $0 \ent \text{ nicht Geburtstag und } 1 \ent \text{ Geburtstag}$ Betrachten wir nun für alle i = 1,...,100:\\
-$X_i: \Omega \rightarrow \{0,1\}$ dabei folgt $X_i \sim Ber(\frac{1}{365})$.
-Daraus lässt sich die Zufallsgröße X wie folgt bilden: 
-\[X = \sum_{i=1}^{100} X_i \]
-\item[(b)]Da wir eine \grqq großes\grqq \text{ }n haben und ein \grqq kleines\grqq \text { } p, lässt es sich Poissonverteilt ansehen. Dabei ist der Parameter 
-$\lambda = 100*\frac{1}{365} = \frac{20}{73} $
-\item[(c)] $P(X=0) \approx \frac{\lambda^k}{k!}*e^{-\lambda} = \frac{\frac{20}{73}^0}{0!} *e^{-\frac{20}{73}} \approx 0,76$
+\item[(a)]
+Wir modellieren unsere Zufallsgröße $X$ als die Anzahl der 100 Studenten, die heute Geburtstag haben, also: $X: \Omega \rightarrow \{0,\dots,100\}$\\
+Die Wahrscheinlichkeit, dass ein Student heute Geburtstag hat, beträgt $\frac{1}{365}$. Die Wahrscheinlichkeit bei einem einzelnen Studenten ist also bernoulliverteilt. Da wir aber ein 100-stufiges Bernoulliexperiment betrachten, ist die Verteilung unserer Zufallsgröße binomial.
+
+\item[(b)]Da wir ein $n = 100 > 50$ und ein $p = \frac{1}{365} < 5\%$ vorliegen haben, lässt sich die Wahrscheinlichkeit mit Poisson approximieren. Dabei ist der Parameter $\lambda = 100 \cdot \frac{1}{365} = \frac{20}{73}$
+
+\item[(c)] $P(X=0) \approx \frac{\lambda^k}{k!} \cdot e^{-\lambda} = \frac{\frac{20}{73}^0}{0!} \cdot e^{-\frac{20}{73}} \approx 0,76$\\
+Zum Vergleich die durch die binomiale Verteilung berechnete Wahrscheinlichkeit: $P(X = 0) = \binom{100}{0} \cdot \frac{1}{365}^0 \cdot \frac{364}{365}^100 \approx 0,76$. Die Approximation stimmt also.
 \end{itemize}
 \end{document}
