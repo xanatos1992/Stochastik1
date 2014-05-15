@@ -32,11 +32,41 @@ E(X) + E(Y) &= \sum_{\omega \in \Omega} X(\omega) \cdot P({\omega}) + \sum_{\ome
 \end{align*}
 
 \section*{Aufgabe 2}
-\begin{itemize}
-\item[(a)]
-\item[(b)]
-\item[(c)]
-\end{itemize}
+Wir müssen ein Modell $(\Omega, P)$ angeben, wobei wir das $P$ erst noch berechnen müssen. Dazu stellen wir aber erst einmal das $\Omega$ auf, welches die Anzahl der geschossenen Tore eines Spielers beschreibt und so aussieht: $\Omega = \{0,1,2,3\}$\\
+Um $P$ auszurechnen, stellen wir ein lineares Gleichungssystem auf, mit den Gleichungen, die wir aus der Aufgabe und den Voraussetzungen für Verteilungen aufstellen können.\\
+Aus der Aufgabe:
+\begin{eqnarray*}
+P(\{0\}) &= 20 \cdot P(\{3\})\\
+P(\{1\}) &= 2,5 \cdot P(\{2\})
+\end{eqnarray*}
+Durch den Erwartungswert:
+\begin{eqnarray*}
+E(\Omega) = 1 = 0 \cdot P(\{0\}) + 1 \cdot P(\{1\}) + 2 \cdot P(\{2\}) + 3 \cdot P(\{3\})
+\end{eqnarray*}
+Durch die Dichteeigenschaft:
+\begin{eqnarray*}
+P(\{0\}) + P(\{1\}) + P(\{2\}) + P(\{3\}) = 1
+\end{eqnarray*}
+Dieses Lineare Gleichungssystem lässt sich eindeutig lösen. Als Lösungen ergeben sich folgende Wahrscheinlichkeiten:
+\begin{align*}
+P(\{0\}) &= \frac{5}{21}\\
+P(\{1\}) &= \frac{15}{28}\\
+P(\{2\}) &= \frac{3}{14}\\
+P(\{3\}) &= \frac{1}{84}\\
+\end{align*}
+Alle Wahrscheinlichkeiten sind positiv, weshalb auch die zweite Dichteeigenschaft gilt.\\
+Somit ist unser Modell mit folgender Definition komplett:\\
+$(\Omega, P)$ mit $\Omega = \{0,1,2,3\}$ und
+\begin{align*}
+P(\omega) = \left\{
+	\begin{array}{l l}
+		5/21 &\text{ für } \omega = 0\\
+		15/28 &\text{ für } \omega = 1\\
+		3/14 &\text{ für } \omega = 2\\
+		1/84 &\text{ für } \omega = 3
+	\end{array}
+\right.
+\end{align*}
 
 \section*{Aufgabe 3}
 Unser Modell sieht wie folgt aus: $\Omega = \{\{1,...,6\}^2\} \text{ } P =Laplaceverteilung$. Unsere Zufallsgröße $X$ bildet von $\Omega$ in die Menge $\{-3,0,2\}$ ab und beschreibt den Gewinn des Bierverkäufers. Dabei geben negative Zahlen den Verlust und positive Zahlen den Gewinn des Betrages an.
