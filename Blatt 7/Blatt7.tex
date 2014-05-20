@@ -33,7 +33,17 @@ $E(X)= 1\cdot P(\{1\})+2\cdot P(\{2\})+3\cdot P(\{3\})+4\cdot P(\{4\}) \newline
 
 \section*{Aufgabe 3}
 \begin{itemize}
-\item[(a)]
+\item[(a)] Damit X und Y unkorreliert sind muss gelten: $Cov(X,Y) = 0$ \\
+Da Laplacemaß ist hat jedes $\omega \in \Omega$ die gleiche Wahrscheinlichkeit, also $\frac{1}{3}$.\\
+$Cov(X,Y) = E\langle((X-E(X))*(Y-E(Y))\rangle \\
+= \sum_{x,y} (x-E(X))*(y-E(Y)) * P(X=x,Y=y) \text{ das x und y können wir auseinander ziehen }\\
+(a*)= \sum_x(x-E(X))*P(X=x)*\sum_y(y-E(Y))*P(Y=y)$ \text{ eine Summe null dann fertig}\\
+Berechnen wir also erst mal den Erwartungswert von X:\\
+$E(X) = 1*P(X=1)+0*P(X=2)-1*P(X=3) = \frac{1}{3} - \frac{1}{3} = 0$\\
+Damit also weiter machen von (a*):\\
+$=(1-0*\frac{1}{3}+0-0*\frac{1}{3}-1-0*\frac{1}{3})*\sum_y(y-E(Y))*P(Y=y) \\
+= 0 * \sum_y(y-E(Y))*P(Y=y) = 0$.\\
+Damit sind X und Y unkorreliert.
 \item[(b)]
 \end{itemize}
 \end{document}
