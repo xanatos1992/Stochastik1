@@ -1,0 +1,39 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\ent}{\mathop{\widehat{=}}}
+
+\begin{document}
+\begin{center}
+\textbf{Stochastik 1 \\ Serie 7 \\}
+\end{center}
+
+\begin{flushright}
+Kevin Stehn 6416016 Gruppe 3 \\
+Konstantin Kobs 6414943 Gruppe 2
+\end{flushright}
+
+\section*{Aufgabe 1 und 2}
+\begin{itemize}
+\item[(a)] Für k = 3 gilt $P(X=3) = \frac{3^3}{3!}\cdot e^{-3} \approx 0,224$ \\
+Für k = 4 gilt schon $P(X=4) = \frac{3^4}{4!}\cdot e^{-4} \approx 0,168$. Daran sieht man das die Wahrscheinlichkeit aber k = 3 nur noch kleiner wird und es am Wahrscheinlichsten ist das 3 Schiffe die Schleuse anlaufen werden.
+\item[(b)] Wenn die Schleuse 4 Schiffe abfertigen kann können wir die Wahrscheinlichkeit das min. ein Schiff nicht geschleust wird daraus berechnen, in dem wir die Gesamtwahrscheinlichkeit von 1 minus den Elementaren Wahrscheinlichkeiten von 1 bis 4 berechnen. Daraus ergibt sich\\
+$P(X>=5) = 1- ( P(X=1)+ P(X=2)+P(X=3)+P(X=4))\newline
+= 1- (\frac{3^1}{1!}\cdot e^{-3} + \frac{3^2}{2!}\cdot e^{-3} +\frac{3^3}{3!}\cdot e^{-3} + \frac{3^4}{4!}\cdot e^{-3} \newline
+= 1-(e^{-3} \cdot (\frac{3^1}{1!} +\frac{3^2}{2!} +\frac{3^3}{3!} +\frac{3^4}{4!}))\approx 0,234$
+\item[(c)] Der Erwartungswert berechnet sich wie folgt:\\
+$E(X)= 1\cdot P(\{1\})+2\cdot P(\{2\})+3\cdot P(\{3\})+4\cdot P(\{4\}) \newline
+= 1\cdot 0,149 + 2\cdot 0,224+3\cdot 0,224+4\cdot 0,168 \approx 1,941$
+\end{itemize}
+
+
+\section*{Aufgabe 3}
+\begin{itemize}
+\item[(a)]
+\item[(b)]
+\end{itemize}
+\end{document}
