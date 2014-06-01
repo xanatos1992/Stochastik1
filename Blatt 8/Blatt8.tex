@@ -43,5 +43,12 @@ $$\mu := \log(Y_i) = \frac{1}{2} \cdot \log(1/2) + \frac{1}{2} \cdot \log(7/4) <
 Dadurch können wir die im Skript ausgeführten Umformungen der Formel ebenfalls durchführen und kommen zu dem gleichen Schluss.
 
 \section*{Aufgabe 3}
+Wir definieren die Zufallsgröße $X_i$, die den geworfenen Wert beim i-ten Wurf angibt. Der Erwartungswert dazu ist $E(X_i) = 3,5$ und die Varianz ist $Var(X_i)=\frac{35}{12}$. Nun definieren wir die Zufallsgröße $X$, die das arithmetische Mittel nach $n$ Würfen angibt. Der Erwartungswert dieser Zufallsgröße beträgt weiterhin $E(X) = 3,5$ und die Varianz berechnet sich durch $Var(X)=\frac{35}{12n}$, da die Varianz mit jedem Wurf verkleinert wird. $\epsilon$ beträgt $\frac{1}{10}$.\\
+Wir formen nun noch die Tschebyscheff-Ungleichung um, um die gewünschten Aussagen treffen zu können. Daraus ergibt sich:
+$$P(|X-E(X)| < \epsilon) \geq 1 - \frac{Var(X)}{\epsilon^2}$$
+In unserem speziellen Fall gilt nun:
+$$P(|X-3,5| < 1/10) \geq 1 - \frac{\frac{35}{12n}}{\frac{1}{100}} \geq 0,95$$
+Nun formen wir die beiden rechten Teile der Ungleichung auf $n$ um und erhalten $n \geq 5833,\overline{3}$.\\
+Nach Tschebyscheff müssen wir also mindestens 5834 mal würfeln, um mit einer Wahrscheinlichkeit von mindestens 95\% um weniger als $\frac{1}{10}$ vom Erwartungswert abzuweichen. Dies ist aber eine untere Schranke und kann durchaus auch sehr viel niedriger liegen.
 
 \end{document}
