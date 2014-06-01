@@ -34,7 +34,13 @@ $$E(Z) = \sum_{i=1}^5 P(Z \geq i) = 1 + \frac{64}{125} + \frac{27}{125}+ \frac{8
 \end{itemize}
 
 \section*{Aufgabe 2}
-
+Wir ersetzen den Faktor $\frac{5}{3}$ durch den Faktor $\frac{7}{4}$ und berechnen das Beispiel erneut:\\
+Der Erwartungswert eines Wurfes liegt bei $E(Y_i)=\frac{1}{2} \cdot \frac{1}{2} + \frac{1}{2} \cdot \frac{7}{4} = \frac{9}{8} > 1$. Damit läge der Erwartungswert bei $n$ Würfen (berechenbar durch die Unabhängigkeit der Zufallsgrößen) bei $E(X_n)=\left(\frac{9}{8}\right)^n \rightarrow \infty$ für $n \rightarrow \infty$. Auch hier würde erwartungsgemäß der Gewinn ins Unermessliche steigen.\\
+Um das GGZ anzuwenden, betrachten wir wieder die Logarithmen der Werte, um aus einem Produkt eine Summe zu bilden:
+$$\log(X_n)=\log(Y_1)+...+\log(Y_n)$$
+$\log(Y_1), ..., \log(Y_n)$ sind dabei unabhängig. Auch hier ist dann der Erwartungswert negativ:
+$$\mu := \log(Y_i) = \frac{1}{2} \cdot \log(1/2) + \frac{1}{2} \cdot \log(7/4) < 0$$
+Dadurch können wir die im Skript ausgeführten Umformungen der Formel ebenfalls durchführen und kommen zu dem gleichen Schluss.
 
 \section*{Aufgabe 3}
 
