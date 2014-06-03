@@ -1,0 +1,123 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+%Zur Code Darstellung
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
+
+\newcommand{\ent}{\mathop{\widehat{=}}}
+
+\begin{document}
+\begin{center}
+\textbf{Stochastik 1 \\ Serie 9 \\}
+\end{center}
+
+\begin{flushright}
+Kevin Stehn 6416016 Gruppe 3 \\
+Konstantin Kobs 6414943 Gruppe 2
+\end{flushright}
+
+\section*{Aufgabe 1}
+\begin{lstlisting}
+import java.util.ArrayList;
+import java.util.Random;
+
+public class MonteCarloVerfahren
+{
+	/**
+	 * Ziehen von drei Kugeln mit nummern von 1-5 davon den geringsten wert und
+	 * erwartungswert berechnen
+	 * 
+	 * @param x
+	 *            wie haeufig ziehen
+	 * @return
+	 */
+	public static double monteCarlo(int x)
+	{
+		double erg = 0;
+		ArrayList<Integer> minWerte = new ArrayList<Integer>();
+		Random random = new Random();
+		
+		int[] kugeln = new int[3];
+		
+		//X mal Drei Kugeln Ziehen und Min Wert Herrausfinden
+		for (int d = 1; d < x; d++)
+		{
+			// Drei mal Ziehen
+			for (int i = 0; i < 3; i++)
+			{
+				kugeln[i] = random.nextInt(6 - 1) + 1;
+			}
+
+			int minWert = Integer.MAX_VALUE;
+			// Kleinsten Wert finden
+			for (int i = 0; i < 3; i++)
+			{
+				if (kugeln[i] < minWert)
+				{
+					minWert = kugeln[i];
+				}
+			}
+			
+			minWerte.add(minWert);
+		}
+		
+		double sum = summeRechnen(minWerte);
+		
+		erg = sum / x;
+		return erg;
+	}
+	
+	public static int summeRechnen(ArrayList<Integer> menge)
+	{
+		int erg = 0;
+		for(Integer i : menge)
+		{
+			erg = erg+i;
+		}
+		return erg;
+	}
+
+	public static void main(String[] args)
+	{
+		//Ausfuehrungen
+		int x = 10000;
+		System.out.println("Monte Carlo Verfahren mit " + x + " Ausfuehrungen:");
+		double erwartungswert = monteCarlo(x);
+		System.out.println("Erwartungs Wert: " + erwartungswert);
+	}
+}
+
+\end{lstlisting}
+\section*{Aufgabe 2 und 3}
+\begin{itemize}
+\item[(a)]
+\item[(b)]
+\item[(c)]
+\end{itemize}
+
+\end{document}
