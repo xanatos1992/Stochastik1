@@ -26,7 +26,7 @@ $ F(x)=\left\{\begin{array}{cl} 0, & x < 0\\
 1 , & x \geq 60 \end{array}\right.$
 \item[(b)]
 \begin{align*}
-P([15, \infty)) &= P((-\infty,\infty) \setminus (-\infty,15)) \\
+P((15, \infty)) &= P((-\infty,\infty) \setminus (-\infty,15]) \\
 &= 1 - F(15)\\
 &= 1 - 0,625\\
 &= 0,375
@@ -42,7 +42,7 @@ Damit $F_c(x)$ eine Verteilungsfunktion ist, muss gelten:
 \item[-]rechtsseitige Stetigkeit \qquad Die Funktion ist in allen Punkten stetig, weshalb diese Eigenschaft implizit erfüllt ist.
 \end{itemize}
 \section*{Aufgabe 3}
+Die Poissonverteilung ist diskret, weswegen der in F eingegebene Parameter x abgerundet werden muss. Der Wert von F(x) ergibt sich dann als Summe der Einzelwahrscheinlichkeiten.
 $$F(x)=\left\{\begin{array}{cl} 0, & x < 0\\ 
-\frac{\lambda^x}{x!} \cdot e^{-\lambda}, & x \geq 0  \end{array}\right.$$
-Damit sind auch alle Eigenschaften abgedeckt.\\
+\sum_{n=0}^{\lfloor x \rfloor}\frac{\lambda^n}{n!} \cdot e^{-\lambda}, & x \geq 0  \end{array}\right.$$
 \end{document}
