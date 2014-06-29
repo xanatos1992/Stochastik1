@@ -72,9 +72,22 @@ P(X \geq 6) &= 1 - P(X \leq 6) + P(\{6\})\\
 
 \section*{Aufgabe 3}
 \begin{itemize}
-
 \item[(a)]
+Um von der Dichtefunktion von $X$ auf die Dichtefunktion von $-X$ zu kommen, müssen die Werte $f(x)$ und $f(-x)$ für alle $x \in \mathbb{R}$ vertauscht werden. Da diese aber laut Aufgabe identisch sind, ist die Dichtefunktion von $X$ identisch mit der Dichtefunktion von $-X$. Dadurch ist auch die Verteilungsfunktion identisch. $\square$
+
 \item[(b)]
+Der Erwartungswert berechnet sich wie folgt:
+$$\int_{-\infty}^{\infty} tf(t) dt$$
+
+Wir fassen zusammen und addieren die linke und rechte Seite an den Stellen $t$ und $-t$ für alle $t \in \mathbb{R}^+$:
+$$t \cdot f(t) + (-t) \cdot f(-t)$$
+
+Da $f(-t) = f(t)$ für alle $t \in \mathbb{R}$ gilt, können wir schreiben:
+$$t \cdot f(t) + (-t) \cdot f(t) = f(t) \cdot (t-t) = 0$$
+Es heben sich also alle Werte links und rechts auf.\\
+Für $t=0$ gilt dann:
+$$0 \cdot f(0) = 0$$
+Alles zusammen ergibt dann also $0$, was das Ergebnis und damit unser Erwartungswert ist.
 
 \end{itemize}
 \end{document}
